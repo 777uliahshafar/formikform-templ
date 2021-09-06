@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 
-import { Form, Button, Container, Row, Col } from 'react-bootstrap'
+import { Form, Button, Container, Row, Col, Card } from 'react-bootstrap'
 import { navigate } from 'gatsby'
 
 const IndexPage = () => {
@@ -219,13 +219,36 @@ const IndexPage = () => {
             </Form.Group>
           </fieldset>
 
-          <p>
+          <Card body>
+            {' '}
             Jika uang, waktu dan halangan lainnya bukan pertimbangan, ruang mana
             yang anda lebih cenderungi untuk dikunjungi? Silakan nilai dengan
             skala poin 100 dimana ``1" artinya ``kurang dicenderungi" dan ``100"
             artinya ``Sangat dicenderungi""
-          </p>
+          </Card>
+          <Form.Group controlId="formRank">
+            <Form.Label>Skor Ruang A</Form.Label>
+            <Form.Control as="select">
+              <option value="0">Pilih..</option>
+              <option value="20">20</option>
+              <option value="40">40</option>
+              <option value="60">60</option>
+              <option value="80">80</option>
+              <option value="100">100</option>
+            </Form.Control>
+          </Form.Group>
 
+          <Form.Group controlId="formRank2">
+            <Form.Label>Skor Ruang B</Form.Label>
+            <Form.Control as="select">
+              <option value="0">Pilih..</option>
+              <option value="20">20</option>
+              <option value="40">40</option>
+              <option value="60">60</option>
+              <option value="80">80</option>
+              <option value="100">100</option>
+            </Form.Control>
+          </Form.Group>
           <Button variant="primary" type="submit">
             Kirimkan
           </Button>
