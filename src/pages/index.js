@@ -11,7 +11,7 @@ const IndexPage = () => {
   const [formState, setFormState] = useState({
     namaLengkap: '',
     alamatEmail: '',
-    nomorHp: '',
+    nomorHp: ''
   })
 
   const encode = (data) => {
@@ -25,7 +25,7 @@ const IndexPage = () => {
   const handleChange = (e) => {
     setFormState({
       ...formState,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     })
   }
 
@@ -33,7 +33,7 @@ const IndexPage = () => {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...this.state }),
+      body: encode({ 'form-name': 'contact', ...this.state })
     })
       .then(() => navigate('/terima-kasih/'))
       .catch((error) => alert(error))
@@ -63,28 +63,18 @@ const IndexPage = () => {
             </label>
           </p>
           <input type="hidden" name="form-name" value="kuesioner-awal" />
-          <Form.Group controlId="formBasicFullName">
-            <Form.Label>Nama Lengkap</Form.Label>
+          <Form.Group controlId="formParticipant">
+            <Form.Label>Partisipan#</Form.Label>
             <Form.Control
               type="text"
-              name="namaLengkap"
+              name="partisipan"
               onChange={handleChange}
-              value={formState.namaLengkap}
-              placeholder="cth: Andi Akrab"
+              value={formState.partisipan}
             />
           </Form.Group>
-          <Form.Group controlId="formBasicEmail">
-            <Form.Label>Alamat Email</Form.Label>
-            <Form.Control
-              type="text"
-              name="alamatEmail"
-              onChange={handleChange}
-              value={formState.alamatEmail}
-              placeholder="andiakrab@gmail.com"
-            />
-          </Form.Group>
+
           <Form.Group controlId="formBasicPhone">
-            <Form.Label>Nomor HP (Optional)</Form.Label>
+            <Form.Label>Nomor HP (Opsional)</Form.Label>
             <Form.Control
               type="text"
               name="nomorHp"
@@ -93,6 +83,30 @@ const IndexPage = () => {
               placeholder="08135519***"
             />
           </Form.Group>
+
+          <fieldset>
+            <Form.Group controlId="formBasicGender">
+              <Form.Label>Jenis Kelamin:</Form.Label>
+              <Form.Check
+                type="radio"
+                label="laki-laki"
+                name="gender"
+                id="lakiLaki"
+                onChange={handleChange}
+                value={formState.gender}
+              />
+
+              <Form.Check
+                type="radio"
+                label="perempuan"
+                name="gender"
+                id="perempuan"
+                onChange={handleChange}
+                value={formState.gender}
+              />
+            </Form.Group>
+          </fieldset>
+
           <Button variant="primary" type="submit">
             Kirim Kuesioner
           </Button>
