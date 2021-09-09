@@ -35,7 +35,7 @@ const Header = ({ siteTitle }) => {
             style={{
               color: `white`,
               fontSize: `22px`,
-              fontFamily: `monospace`,
+              fontFamily: `monospace`
             }}
           >
             {siteTitle}
@@ -44,7 +44,7 @@ const Header = ({ siteTitle }) => {
             style={{
               color: `white`,
               fontSize: `14px`,
-              fontFamily: `monospace`,
+              fontFamily: `monospace`
             }}
           >
             Isian anda menentukan arah perkembangan kota Parepare
@@ -56,11 +56,11 @@ const Header = ({ siteTitle }) => {
 }
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  siteTitle: PropTypes.string
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: ``
 }
 
 export default Header
