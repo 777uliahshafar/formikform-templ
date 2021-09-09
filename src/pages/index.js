@@ -9,9 +9,17 @@ import { navigate } from 'gatsby'
 
 const IndexPage = () => {
   const [formState, setFormState] = useState({
-    namaLengkap: '',
-    alamatEmail: '',
-    nomorHp: ''
+    partisipan: '',
+    nomorHp: '',
+    lakilaki: '',
+    perempuan: '',
+    suku: '',
+    tahunLahir: '',
+    job: '',
+    spaceRank: '',
+    spaceRank2: '',
+    openQuestion: '',
+    openQuestion2: ''
   })
 
   const encode = (data) => {
@@ -51,7 +59,7 @@ const IndexPage = () => {
       <Container>
         <Form
           onSubmit={handleSubmit}
-          name="kuesioner-awal"
+          name="kuesonline v3"
           method="post"
           data-netlify="true"
           action="/terima-kasih"
@@ -62,7 +70,7 @@ const IndexPage = () => {
               I love honeypot : <input name="bot-field" />
             </label>
           </p>
-          <input type="hidden" name="form-name" value="kuesioner-awal" />
+          <input type="hidden" name="form-name" value="kuesonline v3" />
           <Form.Group controlId="formParticipant">
             <Form.Label>Partisipan#</Form.Label>
             <Form.Control
@@ -91,6 +99,31 @@ const IndexPage = () => {
 
               <Col sm={10}>
                 <Form.Check
+                  name="radios"
+                  inline
+                  label="laki-laki"
+                  type="radio"
+                  id="opsilaki"
+                  value="laki-laki"
+                />
+                <Form.Check
+                  inline
+                  name="radios"
+                  label="perempuan"
+                  type="radio"
+                  id="opsiperempuan"
+                  value="perempuan"
+                />
+                <Form.Check
+                  inline
+                  type="radio"
+                  label="3 (disabled)"
+                  name="radios"
+                  id="tiga"
+                  value="disabeld"
+                />
+                {/*
+                <Form.Check
                   inline
                   type="radio"
                   label="laki-laki"
@@ -109,6 +142,7 @@ const IndexPage = () => {
                   onChange={handleChange}
                   value={formState.gender}
                 />
+                */}
               </Col>
             </Form.Group>
           </fieldset>
@@ -228,7 +262,7 @@ const IndexPage = () => {
           </Card>
           <Form.Group controlId="formRank">
             <Form.Label>Skor Ruang A</Form.Label>
-            <Form.Control as="select">
+            <Form.Control as="select" name="spaceRank">
               <option value="0">Pilih..</option>
               <option value="20">20</option>
               <option value="40">40</option>
@@ -240,7 +274,7 @@ const IndexPage = () => {
 
           <Form.Group controlId="formRank2">
             <Form.Label>Skor Ruang B</Form.Label>
-            <Form.Control as="select">
+            <Form.Control as="select" name="spaceRank2">
               <option value="0">Pilih..</option>
               <option value="20">20</option>
               <option value="40">40</option>
@@ -249,6 +283,41 @@ const IndexPage = () => {
               <option value="100">100</option>
             </Form.Control>
           </Form.Group>
+          <Form.Group className="mb-3" controlId="formOpenQuestion">
+            <Form.Label>
+              Mengapa anda menyukai ruang tersebut? Deskripsikan dengan detail
+              apa yang menarik menurut anda tentang atribut ruang itu?
+            </Form.Label>
+            <Form.Control as="textarea" rows={3} name="openQuestion" />
+          </Form.Group>
+
+          <Form.Group
+            className="mb-3"
+            controlId="formOpenQuestion2"
+            onChange={handleChange}
+            value={formState.openQuestion}
+          >
+            <Form.Label>
+              Bagaimana perasaan anda saat memasuki ruang tersebut?
+            </Form.Label>
+            <Form.Control
+              as="textarea"
+              rows={3}
+              name="openQuestion2"
+              onChange={handleChange}
+              value={formState.openQuestion2}
+            />
+          </Form.Group>
+          <Form.Text className="text-muted">
+            Silakan nilai pendapat yang paling mewakili pendapat anda dengan
+            skala poin 5 untuk setiap pernyataan.
+            <i>
+              {' '}
+              1 = Sangat tidak setuju 2 = Tidak setuju 3 = Biasa saja 4 = Setuju
+              5 = Sangat Setuju
+            </i>
+          </Form.Text>
+
           <Button variant="primary" type="submit">
             Kirimkan
           </Button>
