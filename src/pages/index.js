@@ -11,8 +11,6 @@ const IndexPage = () => {
   const [formState, setFormState] = useState({
     partisipan: '',
     nomorHp: '',
-    lakilaki: '',
-    perempuan: '',
     suku: '',
     tahunLahir: '',
     job: '',
@@ -96,53 +94,28 @@ const IndexPage = () => {
               <Form.Label column sm={2}>
                 Jenis Kelamin:
               </Form.Label>
-
               <Col sm={10}>
-                <Form.Check
-                  name="radios"
-                  inline
-                  label="laki-laki"
-                  type="radio"
-                  id="opsilaki"
-                  value="laki-laki"
-                />
-                <Form.Check
-                  inline
-                  name="radios"
-                  label="perempuan"
-                  type="radio"
-                  id="opsiperempuan"
-                  value="perempuan"
-                />
-                <Form.Check
-                  inline
-                  type="radio"
-                  label="3 (disabled)"
-                  name="radios"
-                  id="tiga"
-                  value="disabeld"
-                />
-                {/*
-                <Form.Check
-                  inline
-                  type="radio"
-                  label="laki-laki"
-                  name="gender"
-                  id="lakiLaki"
-                  onChange={handleChange}
-                  value={formState.gender}
-                />
+                <Form.Label>
+                  <Form.Check
+                    inline
+                    name="gender"
+                    type="radio"
+                    id="opsilaki"
+                    value="laki-laki"
+                  />
+                  laki-laki
+                </Form.Label>
 
-                <Form.Check
-                  inline
-                  type="radio"
-                  label="perempuan"
-                  name="gender"
-                  id="perempuan"
-                  onChange={handleChange}
-                  value={formState.gender}
-                />
-                */}
+                <Form.Label>
+                  <Form.Check
+                    inline
+                    name="gender"
+                    type="radio"
+                    id="opsiperempuan"
+                    value="perempuan"
+                  />
+                  perempuan
+                </Form.Label>
               </Col>
             </Form.Group>
           </fieldset>
@@ -154,7 +127,6 @@ const IndexPage = () => {
               </Form.Label>
               <Col sm="10">
                 <Form.Check
-                  inline
                   type="radio"
                   label="Bugis"
                   name="suku"
