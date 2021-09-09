@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Form, Button, Container, Row, Col } from 'react-bootstrap'
 import { navigate } from 'gatsby'
+import './form.css'
 
 const IndexPage = () => {
   const [formState, setFormState] = useState({
@@ -79,80 +80,88 @@ const IndexPage = () => {
           />
         </Form.Group>
         <fieldset>
-          <Form.Group as={Row} className="mb-3" controlId="formGender">
-            <Form.Label column xs={3}>
-              Jenis Kelamin:
+          <Form.Group className="container-1" controlId="formGender">
+            <Form.Label className="box-1">Jenis Kelamin:</Form.Label>
+            <Form.Label className="box-2">
+              <Form.Check
+                className="noPadding"
+                name="gender"
+                type="radio"
+                id="opsilaki"
+                value="laki-laki"
+              />
+              laki-laki
             </Form.Label>
-            <Col xs={4}>
-              <Form.Label>
-                <Form.Check
-                  inline
-                  name="gender"
-                  type="radio"
-                  id="opsilaki"
-                  value="laki-laki"
-                />
-                laki-laki
-              </Form.Label>
-            </Col>
-            <Col xs={4}>
-              <Form.Label>
-                <Form.Check
-                  inline
-                  name="gender"
-                  type="radio"
-                  id="opsiperempuan"
-                  value="perempuan"
-                />
-                perempuan
-              </Form.Label>
-            </Col>
+
+            <Form.Label className="box-2">
+              <Form.Check
+                className="noPadding"
+                name="gender"
+                type="radio"
+                id="opsiperempuan"
+                value="perempuan"
+              />
+              perempuan
+            </Form.Label>
           </Form.Group>
         </fieldset>
-
         <fieldset>
-          <Form.Group as={Row} className="mb-3" controlId="formSuku">
-            <Form.Label column sm={2}>
-              Suku:
-            </Form.Label>
-            <Col sm="10">
+          <Form.Group className="container-1" controlId="formSuku">
+            <Form.Label className="box-1">Suku:</Form.Label>
+            <Form.Label className="box-2">
               <Form.Check
-                type="radio"
-                label="Bugis"
+                className="noPadding"
                 name="suku"
+                type="radio"
                 id="bugis"
-                onChange={handleChange}
-                value={formState.suku}
+                value="Bugis"
               />
-              <Form.Check
-                inline
-                type="radio"
-                label="Makassar"
-                name="suku"
-                id="makassar"
-                onChange={handleChange}
-                value={formState.suku}
-              />
+              Bugis
+            </Form.Label>
 
+            <Form.Label className="box-2">
               <Form.Check
-                inline
-                type="radio"
-                label="Toraja"
+                className="noPadding"
                 name="suku"
+                type="radio"
+                id="makassar"
+                value="Makassar"
+              />
+              Makassar
+            </Form.Label>
+
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="suku"
+                type="radio"
                 id="toraja"
-                onChange={handleChange}
-                value={formState.suku}
+                value="Toraja"
               />
+              Toraja
+            </Form.Label>
+
+            <Form.Label className="box-4">
               <Form.Check
-                inline
-                type="radio"
-                label="Lainnya"
+                className="noPadding"
                 name="suku"
-                id="lainLain"
-                onChange={handleChange}
-                value={formState.suku}
+                type="radio"
+                id="lainnya"
+                value="Lainnya"
               />
-            </Col>
+              Lainnya
+            </Form.Label>
+
+            <Form.Label className="box-4">
+              <Form.Check
+                className="noPadding"
+                name="suku"
+                type="radio"
+                id="lainnya"
+                value="Lainnya"
+              />
+              Lainnya
+            </Form.Label>
           </Form.Group>
         </fieldset>
 
