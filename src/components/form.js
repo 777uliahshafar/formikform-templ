@@ -369,6 +369,957 @@ const IndexPage = () => {
           </Form.Group>
         </fieldset>
 
+        {/*Questione likert beginning*/}
+
+        <fieldset>
+          <Form.Group className="container-1" controlId="formLikertAsk">
+            <Form.Label className="box-1">
+              Q1. Jalan setapak membantu menuntun pengunjung ke ruang publik
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo1"
+                type="radio"
+                id="sangatTidakSetuju"
+                onChange={handleChange}
+                value="sangat tidak setuju"
+              />
+              1
+            </Form.Label>
+
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo1"
+                type="radio"
+                id="tidakSetuju"
+                onChange={handleChange}
+                value="tidak setuju"
+              />
+              2
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo1"
+                type="radio"
+                id="biasaSaja"
+                onChange={handleChange}
+                value="biasa saja"
+              />
+              3
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo1"
+                type="radio"
+                id="setuju"
+                onChange={handleChange}
+                value="setuju"
+              />
+              4
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo1"
+                type="radio"
+                id="sangatSetuju"
+                onChange={handleChange}
+                value="sangat setuju"
+              />
+              5
+            </Form.Label>
+
+            <Form.Control
+              className="comment"
+              as="textarea"
+              rows={2}
+              name="commentNo1"
+              onChange={handleChange}
+              value={formState.commentNo1}
+            />
+          </Form.Group>
+        </fieldset>
+
+        <fieldset>
+          <Form.Group className="container-1" controlId="formLikertAsk">
+            <Form.Label className="box-1">
+              Q2. Jalan setapak membantu menuntun pengunjung ke ruang publik
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo2"
+                type="radio"
+                id="sangatTidakSetuju"
+                onChange={handleChange}
+                value="sangat tidak setuju"
+              />
+              1
+            </Form.Label>
+
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo2"
+                type="radio"
+                id="tidakSetuju"
+                onChange={handleChange}
+                value="tidak setuju"
+              />
+              2
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo2"
+                type="radio"
+                id="biasaSaja"
+                onChange={handleChange}
+                value="biasa saja"
+              />
+              3
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo2"
+                type="radio"
+                id="setuju"
+                onChange={handleChange}
+                value="setuju"
+              />
+              4
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo2"
+                type="radio"
+                id="sangatSetuju"
+                onChange={handleChange}
+                value="sangat setuju"
+              />
+              5
+            </Form.Label>
+
+            <Form.Control
+              className="comment"
+              as="textarea"
+              rows={2}
+              name="commentNo2"
+              onChange={handleChange}
+              value={formState.commentNo1}
+            />
+          </Form.Group>
+        </fieldset>
+
+        <fieldset>
+          <Form.Group className="container-1" controlId="formLikertAsk">
+            <Form.Label className="box-1">
+              Q3. Jalan setapak membantu menuntun pengunjung ke ruang publik
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo3"
+                type="radio"
+                id="sangatTidakSetuju"
+                onChange={handleChange}
+                value="sangat tidak setuju"
+              />
+              1
+            </Form.Label>
+
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo3"
+                type="radio"
+                id="tidakSetuju"
+                onChange={handleChange}
+                value="tidak setuju"
+              />
+              2
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo3"
+                type="radio"
+                id="biasaSaja"
+                onChange={handleChange}
+                value="biasa saja"
+              />
+              3
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo3"
+                type="radio"
+                id="setuju"
+                onChange={handleChange}
+                value="setuju"
+              />
+              4
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo3"
+                type="radio"
+                id="sangatSetuju"
+                onChange={handleChange}
+                value="sangat setuju"
+              />
+              5
+            </Form.Label>
+
+            <Form.Control
+              className="comment"
+              as="textarea"
+              rows={2}
+              name="commentNo3"
+              onChange={handleChange}
+              value={formState.commentNo1}
+            />
+          </Form.Group>
+        </fieldset>
+
+        <fieldset>
+          <Form.Group className="container-1" controlId="formLikertAsk">
+            <Form.Label className="box-1">
+              Q4. Jalan setapak membantu menuntun pengunjung ke ruang publik
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo4"
+                type="radio"
+                id="sangatTidakSetuju"
+                onChange={handleChange}
+                value="sangat tidak setuju"
+              />
+              1
+            </Form.Label>
+
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo4"
+                type="radio"
+                id="tidakSetuju"
+                onChange={handleChange}
+                value="tidak setuju"
+              />
+              2
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo4"
+                type="radio"
+                id="biasaSaja"
+                onChange={handleChange}
+                value="biasa saja"
+              />
+              3
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo4"
+                type="radio"
+                id="setuju"
+                onChange={handleChange}
+                value="setuju"
+              />
+              4
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo4"
+                type="radio"
+                id="sangatSetuju"
+                onChange={handleChange}
+                value="sangat setuju"
+              />
+              5
+            </Form.Label>
+
+            <Form.Control
+              className="comment"
+              as="textarea"
+              rows={2}
+              name="commentNo4"
+              onChange={handleChange}
+              value={formState.commentNo1}
+            />
+          </Form.Group>
+        </fieldset>
+
+        <fieldset>
+          <Form.Group className="container-1" controlId="formLikertAsk">
+            <Form.Label className="box-1">
+              Q5. Jalan setapak membantu menuntun pengunjung ke ruang publik
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo5"
+                type="radio"
+                id="sangatTidakSetuju"
+                onChange={handleChange}
+                value="sangat tidak setuju"
+              />
+              1
+            </Form.Label>
+
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo5"
+                type="radio"
+                id="tidakSetuju"
+                onChange={handleChange}
+                value="tidak setuju"
+              />
+              2
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo5"
+                type="radio"
+                id="biasaSaja"
+                onChange={handleChange}
+                value="biasa saja"
+              />
+              3
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo5"
+                type="radio"
+                id="setuju"
+                onChange={handleChange}
+                value="setuju"
+              />
+              4
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo5"
+                type="radio"
+                id="sangatSetuju"
+                onChange={handleChange}
+                value="sangat setuju"
+              />
+              5
+            </Form.Label>
+
+            <Form.Control
+              className="comment"
+              as="textarea"
+              rows={2}
+              name="commentNo5"
+              onChange={handleChange}
+              value={formState.commentNo1}
+            />
+          </Form.Group>
+        </fieldset>
+
+        <fieldset>
+          <Form.Group className="container-1" controlId="formLikertAsk">
+            <Form.Label className="box-1">
+              Q6. Jalan setapak membantu menuntun pengunjung ke ruang publik
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo6"
+                type="radio"
+                id="sangatTidakSetuju"
+                onChange={handleChange}
+                value="sangat tidak setuju"
+              />
+              1
+            </Form.Label>
+
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo6"
+                type="radio"
+                id="tidakSetuju"
+                onChange={handleChange}
+                value="tidak setuju"
+              />
+              2
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo6"
+                type="radio"
+                id="biasaSaja"
+                onChange={handleChange}
+                value="biasa saja"
+              />
+              3
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo6"
+                type="radio"
+                id="setuju"
+                onChange={handleChange}
+                value="setuju"
+              />
+              4
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo6"
+                type="radio"
+                id="sangatSetuju"
+                onChange={handleChange}
+                value="sangat setuju"
+              />
+              5
+            </Form.Label>
+
+            <Form.Control
+              className="comment"
+              as="textarea"
+              rows={2}
+              name="commentNo6"
+              onChange={handleChange}
+              value={formState.commentNo1}
+            />
+          </Form.Group>
+        </fieldset>
+
+        <fieldset>
+          <Form.Group className="container-1" controlId="formLikertAsk">
+            <Form.Label className="box-1">
+              Q7. Jalan setapak membantu menuntun pengunjung ke ruang publik
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo7"
+                type="radio"
+                id="sangatTidakSetuju"
+                onChange={handleChange}
+                value="sangat tidak setuju"
+              />
+              1
+            </Form.Label>
+
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo7"
+                type="radio"
+                id="tidakSetuju"
+                onChange={handleChange}
+                value="tidak setuju"
+              />
+              2
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo7"
+                type="radio"
+                id="biasaSaja"
+                onChange={handleChange}
+                value="biasa saja"
+              />
+              3
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo7"
+                type="radio"
+                id="setuju"
+                onChange={handleChange}
+                value="setuju"
+              />
+              4
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo7"
+                type="radio"
+                id="sangatSetuju"
+                onChange={handleChange}
+                value="sangat setuju"
+              />
+              5
+            </Form.Label>
+
+            <Form.Control
+              className="comment"
+              as="textarea"
+              rows={2}
+              name="commentNo7"
+              onChange={handleChange}
+              value={formState.commentNo1}
+            />
+          </Form.Group>
+        </fieldset>
+
+        <fieldset>
+          <Form.Group className="container-1" controlId="formLikertAsk">
+            <Form.Label className="box-1">
+              Q8. Jalan setapak membantu menuntun pengunjung ke ruang publik
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo8"
+                type="radio"
+                id="sangatTidakSetuju"
+                onChange={handleChange}
+                value="sangat tidak setuju"
+              />
+              1
+            </Form.Label>
+
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo8"
+                type="radio"
+                id="tidakSetuju"
+                onChange={handleChange}
+                value="tidak setuju"
+              />
+              2
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo8"
+                type="radio"
+                id="biasaSaja"
+                onChange={handleChange}
+                value="biasa saja"
+              />
+              3
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo8"
+                type="radio"
+                id="setuju"
+                onChange={handleChange}
+                value="setuju"
+              />
+              4
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo8"
+                type="radio"
+                id="sangatSetuju"
+                onChange={handleChange}
+                value="sangat setuju"
+              />
+              5
+            </Form.Label>
+
+            <Form.Control
+              className="comment"
+              as="textarea"
+              rows={2}
+              name="commentNo8"
+              onChange={handleChange}
+              value={formState.commentNo1}
+            />
+          </Form.Group>
+        </fieldset>
+
+        <fieldset>
+          <Form.Group className="container-1" controlId="formLikertAsk">
+            <Form.Label className="box-1">
+              Q9. Jalan setapak membantu menuntun pengunjung ke ruang publik
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo9"
+                type="radio"
+                id="sangatTidakSetuju"
+                onChange={handleChange}
+                value="sangat tidak setuju"
+              />
+              1
+            </Form.Label>
+
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo9"
+                type="radio"
+                id="tidakSetuju"
+                onChange={handleChange}
+                value="tidak setuju"
+              />
+              2
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo9"
+                type="radio"
+                id="biasaSaja"
+                onChange={handleChange}
+                value="biasa saja"
+              />
+              3
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo9"
+                type="radio"
+                id="setuju"
+                onChange={handleChange}
+                value="setuju"
+              />
+              4
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo9"
+                type="radio"
+                id="sangatSetuju"
+                onChange={handleChange}
+                value="sangat setuju"
+              />
+              5
+            </Form.Label>
+
+            <Form.Control
+              className="comment"
+              as="textarea"
+              rows={2}
+              name="commentNo9"
+              onChange={handleChange}
+              value={formState.commentNo1}
+            />
+          </Form.Group>
+        </fieldset>
+
+        <fieldset>
+          <Form.Group className="container-1" controlId="formLikertAsk">
+            <Form.Label className="box-1">
+              Q10. Jalan setapak membantu menuntun pengunjung ke ruang publik
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo10"
+                type="radio"
+                id="sangatTidakSetuju"
+                onChange={handleChange}
+                value="sangat tidak setuju"
+              />
+              1
+            </Form.Label>
+
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo10"
+                type="radio"
+                id="tidakSetuju"
+                onChange={handleChange}
+                value="tidak setuju"
+              />
+              2
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo10"
+                type="radio"
+                id="biasaSaja"
+                onChange={handleChange}
+                value="biasa saja"
+              />
+              3
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo10"
+                type="radio"
+                id="setuju"
+                onChange={handleChange}
+                value="setuju"
+              />
+              4
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo10"
+                type="radio"
+                id="sangatSetuju"
+                onChange={handleChange}
+                value="sangat setuju"
+              />
+              5
+            </Form.Label>
+
+            <Form.Control
+              className="comment"
+              as="textarea"
+              rows={2}
+              name="commentNo10"
+              onChange={handleChange}
+              value={formState.commentNo1}
+            />
+          </Form.Group>
+        </fieldset>
+
+        <fieldset>
+          <Form.Group className="container-1" controlId="formLikertAsk">
+            <Form.Label className="box-1">
+              Q11. Jalan setapak membantu menuntun pengunjung ke ruang publik
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo11"
+                type="radio"
+                id="sangatTidakSetuju"
+                onChange={handleChange}
+                value="sangat tidak setuju"
+              />
+              1
+            </Form.Label>
+
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo11"
+                type="radio"
+                id="tidakSetuju"
+                onChange={handleChange}
+                value="tidak setuju"
+              />
+              2
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo11"
+                type="radio"
+                id="biasaSaja"
+                onChange={handleChange}
+                value="biasa saja"
+              />
+              3
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo11"
+                type="radio"
+                id="setuju"
+                onChange={handleChange}
+                value="setuju"
+              />
+              4
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo11"
+                type="radio"
+                id="sangatSetuju"
+                onChange={handleChange}
+                value="sangat setuju"
+              />
+              5
+            </Form.Label>
+
+            <Form.Control
+              className="comment"
+              as="textarea"
+              rows={2}
+              name="commentNo11"
+              onChange={handleChange}
+              value={formState.commentNo1}
+            />
+          </Form.Group>
+        </fieldset>
+
+        <fieldset>
+          <Form.Group className="container-1" controlId="formLikertAsk">
+            <Form.Label className="box-1">
+              Q12. Jalan setapak membantu menuntun pengunjung ke ruang publik
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo12"
+                type="radio"
+                id="sangatTidakSetuju"
+                onChange={handleChange}
+                value="sangat tidak setuju"
+              />
+              1
+            </Form.Label>
+
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo12"
+                type="radio"
+                id="tidakSetuju"
+                onChange={handleChange}
+                value="tidak setuju"
+              />
+              2
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo12"
+                type="radio"
+                id="biasaSaja"
+                onChange={handleChange}
+                value="biasa saja"
+              />
+              3
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo12"
+                type="radio"
+                id="setuju"
+                onChange={handleChange}
+                value="setuju"
+              />
+              4
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo12"
+                type="radio"
+                id="sangatSetuju"
+                onChange={handleChange}
+                value="sangat setuju"
+              />
+              5
+            </Form.Label>
+
+            <Form.Control
+              className="comment"
+              as="textarea"
+              rows={2}
+              name="commentNo12"
+              onChange={handleChange}
+              value={formState.commentNo1}
+            />
+          </Form.Group>
+        </fieldset>
+
+        <fieldset>
+          <Form.Group className="container-1" controlId="formLikertAsk">
+            <Form.Label className="box-1">
+              Q13. Jalan setapak membantu menuntun pengunjung ke ruang publik
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo13"
+                type="radio"
+                id="sangatTidakSetuju"
+                onChange={handleChange}
+                value="sangat tidak setuju"
+              />
+              1
+            </Form.Label>
+
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo13"
+                type="radio"
+                id="tidakSetuju"
+                onChange={handleChange}
+                value="tidak setuju"
+              />
+              2
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo13"
+                type="radio"
+                id="biasaSaja"
+                onChange={handleChange}
+                value="biasa saja"
+              />
+              3
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo13"
+                type="radio"
+                id="setuju"
+                onChange={handleChange}
+                value="setuju"
+              />
+              4
+            </Form.Label>
+            <Form.Label className="box-3">
+              <Form.Check
+                className="noPadding"
+                name="queryNo13"
+                type="radio"
+                id="sangatSetuju"
+                onChange={handleChange}
+                value="sangat setuju"
+              />
+              5
+            </Form.Label>
+
+            <Form.Control
+              className="comment"
+              as="textarea"
+              rows={2}
+              name="commentNo13"
+              onChange={handleChange}
+              value={formState.commentNo13}
+            />
+          </Form.Group>
+        </fieldset>
+
         <Button variant="primary" type="submit">
           Kirimkan
         </Button>
