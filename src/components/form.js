@@ -3,6 +3,7 @@ import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Form, Button, Container } from 'react-bootstrap'
+import './form.css'
 
 const initialValues = {
   nomorHp: ''
@@ -19,13 +20,13 @@ const validate = (values) => {
 
   let errors = {}
   if (!values.nomorHp) {
-    errors.nomorHp = 'Diperlukan'
+    errors.nomorHp = 'Required'
   }
   return errors
 }
 
 const validationSchema = Yup.object().shape({
-  nomorHp: Yup.string().required('Diperlukan!')
+  nomorHp: Yup.string().required('Diperlukan')
 })
 
 const IndexPage = () => {
@@ -38,7 +39,7 @@ const IndexPage = () => {
 
   return (
     <Container>
-      {console.log('Visited field', formik.touched)}
+      {console.log('Visited field', formik.errors)}
       <Form onSubmit={formik.handleSubmit}>
         <Form.Group>
           <Form.Label>Nomor HP (Opsional)</Form.Label>
@@ -50,10 +51,14 @@ const IndexPage = () => {
             onBlur={formik.handleBlur}
             value={formik.values.nomorHp}
             placeholder="08135519***"
+            className={
+              formik.touched.nomorHp && formik.errors.nomorHp ? 'error' : null
+            }
           />
-          <Form.Control.Feedback type="invalid">
-            {formik.errors.nomorHp}
-          </Form.Control.Feedback>
+
+          {formik.touched.nomorHp && formik.errors.nomorHp ? (
+            <div className="error-message">{formik.errors.nomorHp}</div>
+          ) : null}
         </Form.Group>
 
         <Button variant="primary" type="submit">
