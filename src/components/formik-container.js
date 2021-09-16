@@ -22,7 +22,9 @@ const radioOptions = [
 const checkboxOptions = [
   { key: 'Option 1', value: 'cOption1' },
   { key: 'Option 2', value: 'cOption2' },
-  { key: 'Option 3', value: 'cOption3' }
+  { key: 'Option 3', value: 'cOption3' },
+  { key: 'Option 4', value: 'cOption4' },
+  { key: 'Option 5', value: 'cOption5' }
 ]
 
 function FormikContainer() {

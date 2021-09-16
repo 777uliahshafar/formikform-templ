@@ -20,8 +20,8 @@ input[type='email'],
 input[type='password'],
 textarea,
 select {
-  display: block;
-  width: 400px;
+  display: flex;
+  width: 100%;
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857143;
@@ -33,6 +33,16 @@ select {
   /* margin-bottom: 20px; */
 }
 
+@media (min-width: 575.95px) {
+  input[type='text'],
+  input[type='email'],
+  input[type='password'],
+  textarea,
+  select {
+    width: 400px;
+  }
+}
+
 .form-control {
   margin-bottom: 20px;
 }
@@ -40,68 +50,3 @@ select {
 .error {
   color: red;
 }
-
-/*
-
-@media (min-width: 333px) {
-  .container-1 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-
-.box-1 {
-  flex: 5;
-  flex-basis: 100%;
-  order: 1;
-}
-
-.box-2 {
-  flex: 1;
-  flex-basis: 33.33%;
-  order: 2;
-}
-
-.box-3 {
-  flex: 2;
-  order: 1;
-}
-.comment {
-  flex: 1;
-  flex-basis: 100%;
-  order: 2;
-}
-
-.noPadding {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-label {
-  float: left;
-  clear: none;
-  display: inline-block;
-  padding: 0px 0px 0px 8px;
-}
-
-input[type='radio'],
-input.radio {
-  float: left;
-  clear: none;
-  margin: 0px 4px 0 0px;
-}
-
-.error {
-  border: 2px solid #ff6565;
-}
-
-.error-message {
-  color: #ff6565;
-  padding: 0.5em 0.2em;
-  height: 1em;
-  position: absolute;
-  font-size: 0.8em;
-}
-
-*/
