@@ -11,11 +11,27 @@ const dropdownOptions = [
   { key: 'Option 3', value: 'option3' }
 ]
 
+const radioOptions = [
+  { key: 'Option 1', value: 'rOption1' },
+  { key: 'Option 2', value: 'rOption2' },
+  { key: 'Option 3', value: 'rOption3' },
+  { key: 'Option 4', value: 'rOption4' },
+  { key: 'Option 5', value: 'rOption5' }
+]
+
+const checkboxOptions = [
+  { key: 'Option 1', value: 'cOption1' },
+  { key: 'Option 2', value: 'cOption2' },
+  { key: 'Option 3', value: 'cOption3' }
+]
+
 function FormikContainer() {
   const initialValues = {
     nomorHp: '',
     description: '',
-    preferensi: ''
+    preferensi: '',
+    likert: '',
+    checkboxOption: ''
   }
   const validationSchema = Yup.object({
     nomorHp: Yup.string().required('Diperlukan'),
@@ -51,6 +67,18 @@ function FormikContainer() {
               label="Pilih Preferensi"
               name="preferensi"
               options={dropdownOptions}
+            />
+            <FormikControl
+              control="radio"
+              label="Pilih Skala"
+              name="likert"
+              options={radioOptions}
+            />
+            <FormikControl
+              control="checkbox"
+              label="Pilih checkbox"
+              name="checkboxOption"
+              options={checkboxOptions}
             />
 
             <Button
