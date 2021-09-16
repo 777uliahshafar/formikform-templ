@@ -3,6 +3,7 @@ import { Formik } from 'formik'
 import * as Yup from 'yup'
 import { Form, Container, Button } from 'react-bootstrap'
 import FormikControl from './formik-control'
+import { navigate } from 'gatsby'
 
 const dropdownOptions = [
   { key: 'Select an option', value: '' },
@@ -39,9 +40,24 @@ function FormikContainer() {
     nomorHp: Yup.string().required('Diperlukan'),
     description: Yup.string().required('Diperlukan')
   })
+
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+      )
+      .join('&')
+  }
+
   const onSubmit = (values, onSubmitProps) => {
-    console.log('Form data', values)
-    onSubmitProps.setSubmitting(false)
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'formik form v1', ...values })
+    })
+      .then(() => navigate('/terima-kasih'))
+      .catch((error) => alert(error))
+      .finally(() => onSubmitProps.setSubmitting(false))
   }
 
   return (
@@ -57,7 +73,8 @@ function FormikContainer() {
             method="post"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
-            onSubmit={formik.handleSubmit}
+            onSubmit={formik.onSubmit}
+            action="/terima-kasih"
           >
             <p hidden>
               <label>
