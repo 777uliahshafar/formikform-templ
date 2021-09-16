@@ -52,7 +52,20 @@ function FormikContainer() {
         onSubmit={onSubmit}
       >
         {(formik) => (
-          <Form onSubmit={formik.handleSubmit}>
+          <Form
+            name="formik form v1"
+            method="post"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={formik.handleSubmit}
+          >
+            <p hidden>
+              <label>
+                I love honeypot : <input name="bot-field" />
+              </label>
+            </p>
+            <input type="hidden" name="form-name" value="formik form v1" />
+
             <FormikControl
               control="input"
               type="text"
